@@ -1,0 +1,9 @@
+[
+    { "id": 1, "studentId": "2411600001", "name": "Diana Fe Diego", "program": "BS Computer Science", "yearLevel": 4, "units": 21, "gpa": 3.75, "attendanceRate": 96 },
+    { "id": 2, "studentId": "2411600002", "name": "Renella Del Rosario", "program": "BS Information Technology", "yearLevel": 2, "units": 18, "gpa": 1.85, "attendanceRate": 78 },
+    { "id": 3, "studentId": "2411600003", "name": "Amron Basher", "program": "BS Computer Science", "yearLevel": 4, "units": 24, "gpa": 3.20, "attendanceRate": 91 },
+    { "id": 4, "studentId": "2411600004", "name": "Walter Sun", "program": "BS Accountancy", "yearLevel": 3, "units": 15, "gpa": 2.40, "attendanceRate": 85 },
+    { "id": 5, "studentId": "2411600005", "name": "Wneljae Giangan", "program": "BS Nursing", "yearLevel": 3, "units": 22, "gpa": 1.60, "attendanceRate": 70 },
+    { "id": 6, "studentId": "2411600006", "name": "Reahmeil Perocillo", "program": "BS Information Technology", "yearLevel": 4, "units": 20, "gpa": 3.90, "attendanceRate": 98 }
+
+]
