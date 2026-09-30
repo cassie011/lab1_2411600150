@@ -1,12 +1,6 @@
-/**
- * app.js
- * ------------------------------------------------------------------
- * DOM handlers for the GSCSDA Student Portal Dashboard (Lab 4, Part
- * 5). Wires dataManager (state) and dashboardCharts (visualization) to the page: filter controls, live
- * search, academic warning alerts, CSV export, and a simulated
- * real-time feed.
- * ------------------------------------------------------------------
- */
+
+// This is my controller that connects my data to my student page. This is where I will be adding my event listeners and rendering the table and charts. 
+// So my Student page section lives here
 
 document.addEventListener('DOMContentLoaded', () => {
     // Guard: only run on pages that actually have the roster section.
