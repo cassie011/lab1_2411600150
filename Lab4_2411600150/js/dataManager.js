@@ -1,7 +1,6 @@
 /**
- * dataManager.js
  * ------------------------------------------------------------------
- * Central data management module for the GSCSDA Student Portal
+ * Central data management module for the Student Portal
  * Dashboard (Laboratory Exercise 4) — the academic-records section
  * of the portal, covering GPA, program, and standing per student.
  *
@@ -291,7 +290,7 @@ const dataManager = (function () {
     }
 
     // ---------------------------------------------------------------
-    // Real-time simulation hook (wired up by app.js in Part 5)
+    // Real-time simulation hook (wired up by studentsection.js in Part 5)
     // ---------------------------------------------------------------
 
     /** Nudges one random student's GPA to mimic a live data feed. */
