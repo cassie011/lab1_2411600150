@@ -3,6 +3,7 @@
 // So my Student page section lives here
 
 document.addEventListener('DOMContentLoaded', () => {
+
     // Guard: only run on pages that actually have the roster section.
     const tableBody = document.getElementById('studentTableBody');
     if (!tableBody || typeof dataManager === 'undefined') return;
@@ -220,7 +221,7 @@ document.addEventListener('DOMContentLoaded', () => {
         toastEl.addEventListener('hidden.bs.toast', () => toastEl.remove());
     }
 
-    // ---- Part 5 Step 5: simulated real-time updates ---------------------
+    // ---- Step 5: simulated real-time updates ----------
 
     function startRealtimeSimulation() {
         setInterval(() => {
