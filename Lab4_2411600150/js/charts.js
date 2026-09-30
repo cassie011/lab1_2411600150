@@ -1,9 +1,6 @@
 /**
  * charts.js
- * ------------------------------------------------------------------
- * Chart.js configuration and rendering for the GSCSDA Student Portal
- * Dashboard (Laboratory Exercise 4, Part 4).
- *
+ * 
  * Three charts, each reading from dataManager:
  *   1. programValueChart -> Enrolled Students by Program      (bar)
  *   2. standingChart      -> Academic Standing Distribution    (doughnut)
