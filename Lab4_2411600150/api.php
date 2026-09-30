@@ -6,20 +6,6 @@
  * (Laboratory Exercise 4, Part 7). Serves the roster as JSON and
  * supports adding/updating/deleting students.
  *
- * Run under XAMPP (Apache) and call it from js/dataManager.js.
- *
- * Endpoints (relative to this file, e.g. http://localhost/lab4/api.php):
- *   GET  ?action=list                     -> full roster as JSON
- *   GET  ?action=get&id=2411600001         -> single student
- *   POST ?action=add                       -> add a student (JSON body)
- *   POST ?action=update&id=2411600001       -> patch one student's fields (JSON body)
- *   POST ?action=delete&id=2411600001        -> remove a student
- *
- * Data persists to data/students.json so changes survive requests.
- * A real deployment would use MySQL (XAMPP ships with it), but a flat
- * JSON file keeps this lab focused on the JS <-> API data flow rather
- * than SQL/PDO setup.
- * ------------------------------------------------------------------
  */
 
 header('Content-Type: application/json; charset=utf-8');
