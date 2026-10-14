@@ -44,7 +44,7 @@ function updateGreeting(username) {
 function updateStatistics() {
     const stats = [
         { title: 'GPA', value: '3.75', color: 'text-primary', icon: '🎓' },
-        { title: 'Courses', value: '6', color: 'text-success', icon: '📚' },
+        { title: 'Students', value: '6', color: 'text-success', icon: '📚' },
         { title: 'Assignments', value: '12', color: 'text-info', icon: '📝' },
         { title: 'Attendance', value: '94%', color: 'text-warning', icon: '✅' }
     ];

@@ -139,7 +139,7 @@
     <div class="row mb-4">
 
         <!-- Students by Program -->
-        <div class="col-lg-4 col-md-6 mb-3">
+        <div class="col-lg-6 mb-3">
 
             <div class="card shadow-hover h-100">
 
@@ -171,7 +171,7 @@
 
 
         <!-- Academic Standing -->
-        <div class="col-lg-4 col-md-6 mb-3">
+        <div class="col-lg-6 mb-3">
 
             <div class="card shadow-hover h-100">
 
@@ -203,7 +203,7 @@
 
 
         <!-- Top Students -->
-        <div class="col-lg-4 col-md-12 mb-3">
+        <div class="col-lg-6 mb-3">
 
             <div class="card shadow-hover h-100">
 
@@ -222,6 +222,38 @@
                         <canvas
                             id="topStudentsChart"
                             aria-label="Top students by GPA chart"
+                            role="img"
+                        ></canvas>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Attendance -->
+        <div class="col-lg-6 mb-3">
+
+            <div class="card shadow-hover h-100">
+
+                <div class="card-header">
+
+                    <h6 class="mb-0">
+                        Attendance by Student
+                    </h6>
+
+                </div>
+
+                <div class="card-body">
+
+                    <div class="chart-container">
+
+                        <canvas
+                            id="attendanceChart"
+                            aria-label="Attendance rate by student chart"
                             role="img"
                         ></canvas>
 
@@ -558,6 +590,78 @@
                     min: 0,
 
                     max: 4
+
+                }
+
+            }
+
+        }
+
+    });
+
+
+    // ==========================================
+    // Attendance by Student
+    // ==========================================
+
+    const attendanceSorted = <?php echo json_encode($attendanceData, 15, 512) ?>;
+
+    const attendanceLabels = attendanceSorted.map(s => s.name);
+
+    const attendanceRates = attendanceSorted.map(s => s.rate);
+
+    const averageAttendance = <?php echo e($stats['average_attendance']); ?>;
+
+    // Green = 90%+, Yellow = 80-89%, Red = below 80%
+    const attendanceColors = attendanceRates.map(rate =>
+        rate >= 90 ? '#198754' : (rate >= 80 ? '#ffc107' : '#dc3545')
+    );
+
+
+    new Chart(document.getElementById('attendanceChart'), {
+
+        data: {
+
+            labels: attendanceLabels,
+
+            datasets: [
+                {
+                    type: 'bar',
+                    label: 'Attendance %',
+                    data: attendanceRates,
+                    backgroundColor: attendanceColors
+                },
+                {
+                    type: 'line',
+                    label: 'Average (' + averageAttendance + '%)',
+                    data: attendanceLabels.map(() => averageAttendance),
+                    borderColor: '#6B818C',
+                    borderDash: [6, 6],
+                    borderWidth: 2,
+                    pointRadius: 0,
+                    fill: false
+                }
+            ]
+
+        },
+
+        options: {
+
+            responsive: true,
+
+            maintainAspectRatio: false,
+
+            scales: {
+
+                y: {
+
+                    min: 0,
+
+                    max: 100,
+
+                    ticks: {
+                        callback: value => value + '%'
+                    }
 
                 }
 

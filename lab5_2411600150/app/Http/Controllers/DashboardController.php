@@ -91,6 +91,18 @@ class DashboardController extends Controller
             ->take(5);
 
         // ==========================================
+        // Attendance Chart Data (highest to lowest)
+        // ==========================================
+
+        $attendanceData = $students
+            ->sortByDesc('attendance_rate')
+            ->values()
+            ->map(fn ($student) => [
+                'name' => $student->name,
+                'rate' => $student->attendance_rate,
+            ]);
+
+        // ==========================================
         // Send Data to Dashboard
         // ==========================================
 
@@ -99,6 +111,7 @@ class DashboardController extends Controller
             'byProgram',
             'topStudents',
             'students',
+            'attendanceData',
             'programs',
             'greeting'
         ));
