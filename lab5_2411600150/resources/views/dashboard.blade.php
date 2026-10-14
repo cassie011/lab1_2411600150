@@ -16,7 +16,7 @@
     </div>
 
 
-    <!-- Academic Warning Alert -->
+    <!-- Academic Warning -->
     @if ($stats['at_risk_count'] > 0)
 
         <div
